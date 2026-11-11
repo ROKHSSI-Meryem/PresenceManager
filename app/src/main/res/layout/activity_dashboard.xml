@@ -85,6 +85,7 @@
         app:layout_constraintTop_toBottomOf="@id/txtBienvenue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <GridLayout
         android:id="@+id/gridFonctionnalites"
         android:layout_width="0dp"
@@ -97,155 +98,182 @@
         app:layout_constraintTop_toBottomOf="@id/txtInstruction"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-        <LinearLayout
-            android:id="@+id/cardGroupes"
+
+        <!-- Carte Groupes -->
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="0"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
             android:layout_margin="6dp"
-            android:padding="12dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="#E0E7FF">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@android:drawable/ic_menu_agenda"
-                app:tint="#4567B7"
-                android:contentDescription="Groupes"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Groupes"
-                android:textColor="#1E3A5F"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cardAppel"
-            android:layout_width="0dp"
-            android:layout_height="145dp"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="6dp"
-            android:padding="12dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="#DBEAFE">
-
-            <FrameLayout
-                android:id="@+id/frameAppel"
-                android:layout_width="42dp"
-                android:layout_height="42dp">
+            <LinearLayout
+                android:id="@+id/cardGroupes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#E0E7FF">
 
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_gravity="center"
-                    android:src="@android:drawable/ic_menu_call"
-                    app:tint="#2563EB"
-                    android:contentDescription="Faire l'appel"/>
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="#4567B7"
+                    android:contentDescription="Groupes"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:layout_gravity="top|end"
-                    app:cardBackgroundColor="#DC2626"
-                    app:cardCornerRadius="11dp"
-                    app:cardElevation="0dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Groupes"
+                    android:textColor="#1E3A5F"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:id="@+id/txtBadge"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="1"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:textStyle="bold"/>
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Faire l'appel"
-                android:textColor="#1E3A5F"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cardHistorique"
+        <!-- Carte Appel -->
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
             android:layout_margin="6dp"
-            android:padding="12dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="#D1FAE5">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@android:drawable/ic_menu_recent_history"
-                app:tint="#059669"
-                android:contentDescription="Historique"/>
+            <LinearLayout
+                android:id="@+id/cardAppel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#DBEAFE">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Historique"
-                android:textColor="#1E3A5F"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cardStatistiques"
+                <FrameLayout
+                    android:layout_width="42dp"
+                    android:layout_height="42dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_menu_call"
+                        app:tint="#2563EB"
+                        android:contentDescription="Faire l'appel"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="top|end"
+                        app:cardBackgroundColor="#DC2626"
+                        app:cardCornerRadius="11dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/txtBadge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Faire l'appel"
+                    android:textColor="#1E3A5F"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Carte Historique -->
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="1"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
             android:layout_margin="6dp"
-            android:padding="12dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="#FEF3C7">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@android:drawable/ic_menu_sort_by_size"
-                app:tint="#D97706"
-                android:contentDescription="Statistiques"/>
+            <LinearLayout
+                android:id="@+id/cardHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#D1FAE5">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Statistiques"
-                android:textColor="#1E3A5F"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    app:tint="#059669"
+                    android:contentDescription="Historique"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Historique"
+                    android:textColor="#1E3A5F"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Carte Statistiques -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="145dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/cardStatistiques"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#FEF3C7">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:tint="#D97706"
+                    android:contentDescription="Statistiques"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Statistiques"
+                    android:textColor="#1E3A5F"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </GridLayout>
+
     <TextView
         android:id="@+id/txtFooterDashboard"
         android:layout_width="wrap_content"
