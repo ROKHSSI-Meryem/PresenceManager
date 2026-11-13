@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_ouvrir_groupes"
+        android:title="Ouvrir Groupes" />
+    <item
+        android:id="@+id/action_informations"
+        android:title="Informations" />
+</menu>
